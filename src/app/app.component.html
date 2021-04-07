@@ -1,7 +1,7 @@
 <h3>Practicando el ngFor</h3>
 
 <ul>
-    <app-user *ngFor="let user of users" [users]="user" ></app-user>
+  <app-user *ngFor="let user of users" [users]="user"></app-user>
 </ul>
 
 <h3>Practicando el ngIf</h3>
@@ -12,3 +12,17 @@
   </li>
 </ul>
 
+<h3>Practicando las propiedades</h3>
+
+<h4><strong>Datos del Usuario</strong></h4>
+<div>
+  <p>Name: {{name}}</p>
+  <p>Street: {{address.street}}</p>
+  <p>Ciudad: {{address.city}}</p>
+
+  <ul>
+    <li *ngFor="let hobby of hobbies">
+      {{hobby}}
+    </li>
+  </ul>
+</div>
