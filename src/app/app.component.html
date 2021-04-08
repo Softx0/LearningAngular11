@@ -1,28 +1,9 @@
-<h3>Practicando el ngFor</h3>
-
 <ul>
-  <app-user *ngFor="let user of users" [users]="user"></app-user>
-</ul>
-
-<h3>Practicando el ngIf</h3>
-
-<ul>
-  <li *ngIf="banderita">
-    Esta activado
+  <li *ngFor="let user of users">
+    {{user}} <button (click)="deleteUser(user)">X</button>
   </li>
 </ul>
 
-<h3>Practicando las propiedades</h3>
-
-<h4><strong>Datos del Usuario</strong></h4>
-<div>
-  <p>Name: {{name}}</p>
-  <p>Street: {{address.street}}</p>
-  <p>Ciudad: {{address.city}}</p>
-
-  <ul>
-    <li *ngFor="let hobby of hobbies">
-      {{hobby}}
-    </li>
-  </ul>
-</div>
+<button (click)="sayHello()">
+  Click me!
+</button>

@@ -6,27 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'AngularCourse11';
-  users: Array<String> = ['Ryan', 'Shirley', 'Emmanuel', 'Luna', 'Poppy'];
-  banderita: boolean = false;
 
-  name: string = 'John Doe';
-  age: number = 0;
-  address: {
-    street: string;
-    city: string;
-  };
-  hobbies: string[];
+  users: string[] = ['Shirley', 'Poppy', 'Luna'];
 
-  constructor() {
-    this.age = 28;
-    this.address = {
-      street: '2218 Backer St',
-      city: 'London'
-    };
-    this.hobbies = ['swimming', 'read', 'write'];
+  public sayHello() {
+    alert('Hola mi amigo!');
   }
 
-  
+  public deleteUser(user: string) {
+    for (let i = 0; i < this.users.length; i++) {
+      if (user == this.users[i]) {
 
+        //practicando los metodos de array de js | splice: cual y cuantos
+        this.users.splice(i, 1);
+      }
+    }
+  }
 }
