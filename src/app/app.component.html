@@ -1,28 +1,35 @@
-<h3>Practicando el ngFor</h3>
+<!-- manejar el evento de envio -->
+<!--
+    En vez de id en angular hay algo llamado referencia en la podemos obtener el input entero
+    Con .value se resuelve todo
+-->
+<form (submit)="addUser(newUser.value)">
+  <input #newUser type="text" placeholder="John Doe" />
+  <button id="sendUser">Send User</button>
+</form>
+
 
 <ul>
-  <app-user *ngFor="let user of users" [users]="user"></app-user>
-</ul>
-
-<h3>Practicando el ngIf</h3>
-
-<ul>
-  <li *ngIf="banderita">
-    Esta activado
+  <li *ngFor="let user of users">
+    {{user}} <button (click)="deleteUser(user)">X</button>
   </li>
 </ul>
 
-<h3>Practicando las propiedades</h3>
+<button (click)="sayHello()">
+  Click me!
+</button>
 
-<h4><strong>Datos del Usuario</strong></h4>
 <div>
-  <p>Name: {{name}}</p>
-  <p>Street: {{address.street}}</p>
-  <p>Ciudad: {{address.city}}</p>
 
-  <ul>
-    <li *ngFor="let hobby of hobbies">
-      {{hobby}}
-    </li>
-  </ul>
+  <form>
+    <div>
+      Nombre: <input type="text" name="name" [(ngModel)] />
+    </div>
+    <div>
+      Edad:<input type="number" name="age" />
+    </div>
+  </form>
+
+  <div>name: {{name}}</div>
+  <div>age: {{age}}</div>
 </div>
