@@ -1,3 +1,14 @@
+<!-- manejar el evento de envio -->
+<!--
+    En vez de id en angular hay algo llamado referencia en la podemos obtener el input entero
+    Con .value se resuelve todo
+-->
+<form (submit)="addUser(newUser.value)">
+  <input #newUser type="text" placeholder="John Doe" />
+  <button id="sendUser">Send User</button>
+</form>
+
+
 <ul>
   <li *ngFor="let user of users">
     {{user}} <button (click)="deleteUser(user)">X</button>
@@ -7,3 +18,18 @@
 <button (click)="sayHello()">
   Click me!
 </button>
+
+<div>
+
+  <form>
+    <div>
+      Nombre: <input type="text" name="name" [(ngModel)] />
+    </div>
+    <div>
+      Edad:<input type="number" name="age" />
+    </div>
+  </form>
+
+  <div>name: {{name}}</div>
+  <div>age: {{age}}</div>
+</div>
