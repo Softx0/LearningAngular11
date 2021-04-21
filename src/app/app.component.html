@@ -19,17 +19,19 @@
   Click me!
 </button>
 
-<div>
 
+<!-- Doble enlace de datos o DataBinding -->
+
+<div>
   <form>
     <div>
-      Nombre: <input type="text" name="name" [(ngModel)] />
+      Nombre: <input type="text" name="name" [(ngModel)]="name" />
     </div>
     <div>
-      Edad:<input type="number" name="age" />
+      Edad:<input type="number" name="age" [(ngModel)]="age" />
     </div>
   </form>
-
+  <br/>
   <div>name: {{name}}</div>
   <div>age: {{age}}</div>
 </div>
