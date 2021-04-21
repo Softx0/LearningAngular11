@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from '../services/data.service';
+import { IPost } from './models/interfaces/IPost';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +12,15 @@ export class AppComponent {
   name: string = "Jhon Carter";
   age: number = 3;
   users: string[] = ['Shirley', 'Poppy', 'Luna'];
+  posts: IPost[] = [];
+
+  constructor(private dataService: DataService){
+    this.dataService.getData()
+      .subscribe(data  => {
+        this.posts = data
+        console.log(data);
+    });
+  }
 
   public sayHello() {
     alert('Hola mi amigo!');
@@ -31,4 +42,5 @@ export class AppComponent {
     //cancele el evento de resetear la pag
     return false;
   }
+
 }

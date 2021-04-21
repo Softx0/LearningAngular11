@@ -35,3 +35,12 @@
   <div>name: {{name}}</div>
   <div>age: {{age}}</div>
 </div>
+
+
+<hr/>
+
+<!-- ngFor: Recordando la primera es la que se utilizara la segunda es la que esta en la clase -->
+<div *ngFor="let post of posts">
+  <h3>{{post.title}}</h3>
+  <p>{{post.body}}</p>
+</div>
