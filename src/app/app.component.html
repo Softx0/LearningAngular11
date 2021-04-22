@@ -1,48 +1,60 @@
+<ul>
+  <li>
+    <a routerLink="/">Home</a>
+  </li>
+
+  <li>
+    <a routerLink="/about">Sobre Nosotros</a>
+  </li>
+
+</ul>
+
+<router-outlet> </router-outlet>
+
 <!-- manejar el evento de envio -->
 <!--
     En vez de id en angular hay algo llamado referencia en la podemos obtener el input entero
     Con .value se resuelve todo
--->
-<form (submit)="addUser(newUser.value)">
-  <input #newUser type="text" placeholder="John Doe" />
-  <button id="sendUser">Send User</button>
-</form>
+  -->
+<!-- <form (submit)="addUser(newUser.value)">
+    <input #newUser type="text" placeholder="John Doe" />
+    <button id="sendUser">Send User</button>
+  </form>
 
 
-<ul>
-  <li *ngFor="let user of users">
-    {{user}} <button (click)="deleteUser(user)">X</button>
-  </li>
-</ul>
+  <ul>
+    <li *ngFor="let user of users">
+      {{user}} <button (click)="deleteUser(user)">X</button>
+    </li>
+  </ul>
 
-<button (click)="sayHello()">
-  Click me!
-</button>
+  <button (click)="sayHello()">
+    Click me!
+  </button> -->
 
 
 <!-- Doble enlace de datos o DataBinding -->
 
-<div>
-  <form>
-    <div>
-      Nombre: <input type="text" name="name" [(ngModel)]="name" />
-    </div>
-    <div>
-      Edad:<input type="number" name="age" [(ngModel)]="age" />
-    </div>
-  </form>
-  <br/>
-  <div>name: {{name}}</div>
-  <div>age: {{age}}</div>
-</div>
+<!-- <div>
+    <form>
+      <div>
+        Nombre: <input type="text" name="name" [(ngModel)]="name" />
+      </div>
+      <div>
+        Edad:<input type="number" name="age" [(ngModel)]="age" />
+      </div>
+    </form>
+    <br />
+    <div>name: {{name}}</div>
+    <div>age: {{age}}</div>
+  </div> -->
 
 
-<hr/>
+<!-- <hr /> -->
+
 
 <!-- ngFor: Recordando la primera es la que se utilizara la segunda es la que esta en la clase -->
-<div *ngFor="let post of posts">
-  <h3>{{post.title}}</h3>
-  <p>{{post.body}}</p>
-</div>
-
-
+<!-- <div *ngFor="let post of posts">
+    <h3>{{post.title}}</h3>
+    <p>{{post.body}}</p>
+  </div> -->
